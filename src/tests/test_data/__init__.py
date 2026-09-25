@@ -1,0 +1,9 @@
+from .normal_response import response_data as one_post_response
+from .three_posts_response import response_data as three_post_response
+from .one_post_without_image import response_data as post_without_image
+from .one_post_without_text import response_data as post_without_text
+from .one_post_two_image import response_data as post_two_image
+from .one_post_photo_video import response_data as post_photo_video
+from .one_post_two_video import response_data as post_two_video
+from .one_post_emojii import response_data as post_emojii_only
+from .one_post_text_with_emoji import response_data as post_emojii_with_text

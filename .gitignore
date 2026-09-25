@@ -1,0 +1,15 @@
+.env
+.idea
+.vscode/
+.git
+.venv/
+.pytest_cache/
+
+bin
+tmp
+
+**/__pycache__/
+backend/parser-service/allure-results/
+backend/parser-service/.pytest_cache/
+backend/parser-service/allure-report/
+docker-compose.yml

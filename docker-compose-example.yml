@@ -1,0 +1,21 @@
+# Пример docker-compose.yml
+# Для разработки необходимо разкоментировать строки с "##"
+# Для деплоя необходимо разкоментировать строки с "####"
+
+services:
+  parser-service:
+    #### image: parser-service:latest
+    ## build:
+    ##   context: .
+    ##   dockerfile: ./Dockerfile
+    ports: ["7000:7000"]
+    environment:
+      - LOG_LEVEL=info
+      - VK_API_KEY= # Сервисный ключ доступа к VK API
+      - VK_GROUP_DOMAIN= # Домен пользователя (группы) Вконтакте, откуда посты будут браться по-умолчанию
+    #### healthcheck:
+    ####   test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:7000/api/service/health\")' || exit 1"]
+    ####   interval: 1m30s
+    ####   timeout: 30s
+    ####   retries: 5
+    ####   start_period: 30s
